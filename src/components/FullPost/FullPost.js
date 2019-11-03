@@ -12,10 +12,8 @@ class FullPost extends Component {
     };
 
     getCommentsHandler = (id) => {
-        const queryString = "id=" + id;
         this.props.history.push({
-            pathname: '/comments',
-            search: '?' + queryString
+            pathname: '/comments/postId' + id,
         });
     };
 
@@ -39,7 +37,7 @@ class FullPost extends Component {
                 <Button
                     btnType={"get_quote"}
                     click={() => this.getCommentsHandler(this.props.postId)}
-                    value={"Comments"}
+                    value={"Comments for this post"}
                 />
             </div>
         );

@@ -1,0 +1,19 @@
+.Comment {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: lightyellow;
+}
+.Clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.Email {
+    float: left;
+    font-weight: 700;
+    font-style: italic;
+}
