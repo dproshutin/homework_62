@@ -9,7 +9,7 @@ class Comment extends Component {
         id: ""
     };
 
-    componentDidMount() {
+    _getComments = () => {
         const id = this.props.match.params.id;
         const BASE_URL = "https://jsonplaceholder.typicode.com";
         axios.get(BASE_URL + "/comments")
@@ -26,6 +26,20 @@ class Comment extends Component {
                 });
                 this.setState({comments: commentsPerSelectedPostId});
             })
+    };
+
+    componentDidMount() {
+        this._getComments();
+    }
+
+    _shouldRequest = () => {
+        return (this.props.postId !== this.state.id);
+    };
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this._shouldRequest()) {
+            this._getComments();
+        }
     }
 
     render() {

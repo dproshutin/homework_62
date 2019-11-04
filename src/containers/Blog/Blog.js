@@ -3,6 +3,7 @@ import axios from "axios";
 import './Blog.css';
 import Post from "../../components/Post/Post";
 import FullPost from "../../components/FullPost/FullPost";
+import Button from "../../components/UI/Button/Button";
 
 class Blog extends Component {
 
@@ -45,14 +46,11 @@ class Blog extends Component {
 
     togglePostsForm = () => {
         this.setState(prevState => {
-            console.log("[Blog] Toggling Form");
             return {postsFormShown: !prevState.postsFormShown};
         });
     };
 
     render() {
-        console.log("[Blog] render");
-
         let postsForm = null;
 
         if (!this.state.postsFormShown) {
@@ -76,7 +74,12 @@ class Blog extends Component {
                     {this.state.postsFormShown ? posts : null}
                 </section>
 
-                <button onClick={this.togglePostsForm}>Toggle Form</button>
+                <Button
+                    btnType={"get_quote"}
+                    click={this.togglePostsForm}
+                    value={"Toggle Form"}
+                />
+
                 <FullPost
                     postId={this.state.currentPostId}
                     history={this.props.history}

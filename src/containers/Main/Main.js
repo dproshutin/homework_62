@@ -18,7 +18,7 @@ class Main extends Component {
                 <Button
                     btnType={"get_quote"}
                     click={this.blogsShowHandler}
-                    history={this.props.history}
+                    // history={this.props.history}
                     value={"Blogs"}
                 />
                 <Button

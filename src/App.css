@@ -9,4 +9,8 @@
 
 .AppLink {
   margin: 10px;
+  color: #944317;
+}
+.active {
+  color: red;
 }
