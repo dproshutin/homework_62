@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="App">
             <div className="AppNavLinksWrapper">
-                <NavLink to="/" className="AppLink" exact>Home</NavLink>
+                <NavLink to="/" className="AppLink" activeStyle={{border: "1px solid red"}} exact>Home</NavLink>
                 <NavLink to="/blogs" className="AppLink" exact>Blogs</NavLink>
                 <NavLink to="/bloggers" className="AppLink" exact>Bloggers</NavLink>
                 <NavLink to="/comments" className="AppLink">Comments</NavLink>

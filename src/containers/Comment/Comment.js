@@ -22,7 +22,7 @@ class Comment extends Component {
                     } else if (id === undefined) {
                         commentsPerSelectedPostId.push(item);
                     }
-                    return 1;
+                    return item;
                 });
                 this.setState({comments: commentsPerSelectedPostId});
             })
